@@ -1,14 +1,25 @@
-<h1>Inscription</h1>
+{# La page d’inscription a été retirée du parcours applicatif. #}
+{% extends 'base.html.twig' %}
 
-{{ form_start(registrationForm) }}
+{% block title %}Inscription désactivée{% endblock %}
 
-{{ form_row(registrationForm.username) }}
-{{ form_row(registrationForm.email) }}
-{{ form_row(registrationForm.password) }}
-{{ form_row(registrationForm.passwordConfirmation) }}
+{% block body %}
+    <div class="auth-page">
+        <div class="auth-card auth-card-register">
+            <div class="auth-brand">
+                <span class="auth-brand-icon">M</span>
+                <span class="auth-brand-text">Matelio</span>
+            </div>
 
-<button type="submit">
-    S'inscrire
-</button>
+            <div class="auth-heading">
+                <span class="auth-kicker">Accès</span>
+                <h1>Inscription désactivée</h1>
+                <p>Cette instance n’accepte pas la création de compte.</p>
+            </div>
 
-{{ form_end(registrationForm) }}
+            <div class="auth-links">
+                <a href="{{ path('app_login') }}">Retour à la connexion</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

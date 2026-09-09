@@ -26,4 +26,8 @@ RUN composer install \
 
 COPY . .
 
+RUN chmod +x docker/entrypoint.sh
+
+ENTRYPOINT ["/bin/sh", "docker/entrypoint.sh"]
+
 CMD ["php-fpm"]
